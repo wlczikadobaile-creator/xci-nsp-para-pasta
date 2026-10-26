@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="1. Escolher arquivo XCI / NSP" />
+
+    <TextView
+        android:id="@+id/txtInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nenhum arquivo"
+        android:textSize="13sp" />
+
+    <Button
+        android:id="@+id/btnOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="2. Escolher pasta de saída" />
+
+    <TextView
+        android:id="@+id/txtOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nenhuma pasta"
+        android:textSize="13sp" />
+
+    <RadioGroup
+        android:id="@+id/modeGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+        <RadioButton
+            android:id="@+id/modeExtract"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Extrair jogo (exefs + romfs) - precisa prod.keys" />
+
+        <RadioButton
+            android:id="@+id/modeUnpack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Só desempacotar (pasta com .nca) - sem chaves" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnKeys"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3. Escolher prod.keys" />
+
+    <TextView
+        android:id="@+id/txtKeys"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nenhuma chave"
+        android:textSize="13sp" />
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Converter" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="@android:style/Widget.Material.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="1000" />
+
+    <TextView
+        android:id="@+id/txtStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="13sp" />
+
+    <ScrollView
+        android:id="@+id/logScroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/txtLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:textIsSelectable="true"
+            android:textSize="11sp" />
+    </ScrollView>
+</LinearLayout>
